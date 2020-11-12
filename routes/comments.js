@@ -5,6 +5,9 @@ const Comment = require('../models/Comment');
 
 //function to retrive data
 router.get('/', async (req, res) => {
+
+    return res.json({})
+    
    try{
         const comments = await  Comment.find();
         res.json(comments);
@@ -16,7 +19,7 @@ router.get('/', async (req, res) => {
 
 
 // function to push data
-router.post('/', (req, res) => {
+router.post('/', async (req, res) =>  {
 
     const comment = new Comment({
         message: req.body.message
