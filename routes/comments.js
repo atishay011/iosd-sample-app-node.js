@@ -6,14 +6,14 @@ const Comment = require('../models/Comment');
 //function to retrive data
 router.get('/', async (req, res) => {
 
-    return res.json({})
+  //  return res.json({})
     
    try{
         const comments = await  Comment.find();
-        res.json(comments);
+      return  res.json(comments);
     }
     catch(err){
-        res.json({message : err});
+       return  res.json({message : err});
     }
 });
 
