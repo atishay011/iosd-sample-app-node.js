@@ -6,7 +6,7 @@ const Comment = require('../models/Comment');
 //function to retrive data
 router.get('/', async (req, res) => {
 
-  //  return res.json({})
+    return res.json({})
     
    try{
         const comments = await  Comment.find();
