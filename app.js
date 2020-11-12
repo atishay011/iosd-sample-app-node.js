@@ -19,5 +19,5 @@ process.env.DB_CONNECTION,
         console.error(err);
     });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
